@@ -1,0 +1,11 @@
+{% extends 'main/layout.html'%}
+
+
+{% block title %}Home{% endblock %}
+{% block content %}
+      {% for el in news %}
+      <div class="all_title">
+          <a class="title" href="/one_news/{{el.id}}">{{ el.title }}</a>
+      </div>
+      {% endfor %}
+{% endblock %}

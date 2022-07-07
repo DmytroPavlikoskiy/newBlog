@@ -1,0 +1,18 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Create News{% endblock %}
+
+{% block content %}
+    <div class="block-form">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.date }}<br>
+            <input type="file" name="document">
+            <span> {{ error }}</span>
+            <button class="btn-create" type="submit">Добавити Новину</button>
+        </form>
+    </div>
+{% endblock %}
